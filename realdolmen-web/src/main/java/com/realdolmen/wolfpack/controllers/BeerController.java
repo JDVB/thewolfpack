@@ -29,7 +29,6 @@ public class BeerController {
     }
 
 
-
     public List<Beer> fetchAllBeers(){
         //return beerEJB.fetchAllBeers();
         Beer beer = new Beer("blond", "AB Inbev", "Leffe", 25, 8.5);

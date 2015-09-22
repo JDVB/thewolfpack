@@ -31,4 +31,12 @@ public class BeerEJB {
         beer.setTotalVolume(newTotalVolume);
         beer.setCount(newCount);
     }
+
+    public void createBeer(Beer beer) {
+        em.persist(beer);
+    }
+
+    public void removeBeerById(int id) {
+        em.remove(em.getReference(Beer.class, id));
+    }
 }
