@@ -19,20 +19,23 @@
     <!--</c:forEach>-->
 
     <h:form>
-        <img src="images/jupiler.jpg" width="100px" height="100px" />
-        <h:outputLabel value="1" />
+        <table>
+            <tr>
+                <td>
+                    <h:commandButton action="#{dummyController.increaseJupiler}" image="images/jupiler.jpg" style="width: 100px; height: 100px"/>
+                    <h:outputLabel value="${dummyController.jupiler}" />
+                </td>
+                <td>
+                    <h:commandButton action="#{dummyController.increaseDuvel}" image="images/duvel.png" style="width: 100px; height: 100px"/>
+                    <h:outputLabel value="${dummyController.duvel}" />
+                </td>
+                <td>
+                    <h:commandButton action="#{dummyController.increaseLeffe}" image="images/leffe.png" style="width: 100px; height: 100px"/>
+                    <h:outputLabel value="${dummyController.leffe}" />
+                </td>
+            </tr>
+        </table>
     </h:form>
-
-    <h:form>
-        <img src="images/jupiler.jpg" width="100px" height="100px" />
-        <h:outputLabel value="1" />
-    </h:form>
-
-    <h:form>
-        <img src="images/jupiler.jpg" width="100px" height="100px" />
-        <h:outputLabel value="1" />
-    </h:form>
-
 
 </h:body>
 
