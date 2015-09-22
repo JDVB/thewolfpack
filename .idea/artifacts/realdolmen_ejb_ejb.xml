@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="ejb-jar" name="realdolmen-ejb:ejb">
-    <output-path>$PROJECT_DIR$/realdolmen-ejb/target</output-path>
-    <root id="archive" name="realdolmen-ejb.jar">
-      <element id="artifact" artifact-name="realdolmen-ejb:ejb exploded" />
-    </root>
-  </artifact>
-</component>
