@@ -14,8 +14,9 @@ public class BeerEJB {
     @PersistenceContext
     EntityManager em;
 
-    public List<Beer> fetchAllBeers() {
+  /*  public List<Beer> fetchAllBeers() {
         TypedQuery<Beer> query = em.createNamedQuery(Beer.FIND_ALL, Beer.class);
         return query.getResultList();
     }
+    */
 }
