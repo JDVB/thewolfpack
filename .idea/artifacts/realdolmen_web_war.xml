@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="realdolmen-web:war">
-    <output-path>$PROJECT_DIR$/realdolmen-web/target</output-path>
-    <root id="archive" name="realdolmen-web.war">
-      <element id="artifact" artifact-name="realdolmen-web:war exploded" />
-    </root>
-  </artifact>
-</component>
