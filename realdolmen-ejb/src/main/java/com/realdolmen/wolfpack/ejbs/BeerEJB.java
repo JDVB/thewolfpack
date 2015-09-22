@@ -24,4 +24,11 @@ public class BeerEJB {
         TypedQuery<Beer> query = em.createNamedQuery(Beer.FIND_BEER_BY_ID, Beer.class);
         return query.setParameter("id", id).getSingleResult();
     }
+
+    public void addBeerToBeerCounter(Beer beer) {
+        int newCount = beer.getCount() + 1;
+        double newTotalVolume = beer.getTotalVolume() + beer.getVolume();
+        beer.setTotalVolume(newTotalVolume);
+        beer.setCount(newCount);
+    }
 }

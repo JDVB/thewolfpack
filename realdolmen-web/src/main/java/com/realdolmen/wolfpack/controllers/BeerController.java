@@ -21,21 +21,13 @@ public class BeerController {
     @Inject
     BeerEJB beerEJB;
 
-    private Map<Beer, Integer> beerMap = new HashMap<>();
     private List<Beer> beers = new ArrayList<>();
 
     public void beerButtonPressed(int id) {
        Beer beer  = beerEJB.findBeerById(id);
-        int count;
-       if(!beerMap.containsKey(beer)){
-           count = 1;
-           beerMap.put(beer, count);
-        }
-        else {
-           count = beerMap.get(beer);
-           beerMap.put(beer, count++);
-       }
+       beerEJB.addBeerToBeerCounter(beer);
     }
+
 
 
     public List<Beer> fetchAllBeers(){

@@ -76,6 +76,30 @@ public class Beer {
         this.alcoholPercentage = alcoholPercentage;
     }
 
+    public double getTotalVolume() {
+        return totalVolume;
+    }
+
+    public void setTotalVolume(double totalVolume) {
+        this.totalVolume = totalVolume;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public String getImageSource() {
+        return imageSource;
+    }
+
+    public void setImageSource(String imageSource) {
+        this.imageSource = imageSource;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
