@@ -41,7 +41,7 @@
 
     <dependencies>
 
-        <!-- Depend on the ejb module and war so that we can package them -->
+        <!-- Depend on the repositories module and war so that we can package them -->
         <dependency>
             <groupId>com.realdolmen</groupId>
             <artifactId>realdolmen-web</artifactId>
