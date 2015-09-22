@@ -13,14 +13,18 @@
 
     <h:form>
         <h:outputLabel for="username">Username:</h:outputLabel>
-        <h:inputText id="username"/>
-        <h:message for="username"/>
+        <h:inputText id="username" value="${loginController.username}"/>
+        <h:message for="username" />
 
-        <br/>
+        <br />
 
         <h:outputLabel for="password">Password</h:outputLabel>
-        <h:inputSecret id="password"/>
+        <h:inputSecret id="password" value="${loginController.password}"/>
         <h:message for="password"/>
+
+        <br />
+
+        <h:commandButton action="${loginController.login()}" value="Login" />
     </h:form>
 </h:body>
 </html>
