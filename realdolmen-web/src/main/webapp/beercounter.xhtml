@@ -14,25 +14,13 @@
 <h:body>
     <h1>Beer counter</h1>
 
-    <!--<c:forEach items="${beerController.fetchAllBeers()}" var="beer">-->
-        <!--<h:outputText value="${beer}"/><br/>-->
-    <!--</c:forEach>-->
-
     <h:form>
         <table>
             <tr>
-                <td>
-                    <h:commandButton action="#{dummyController.increaseJupiler}" image="images/jupiler.jpg" style="width: 100px; height: 100px"/>
-                    <h:outputLabel value="${dummyController.jupiler}" />
-                </td>
-                <td>
-                    <h:commandButton action="#{dummyController.increaseDuvel}" image="images/duvel.png" style="width: 100px; height: 100px"/>
-                    <h:outputLabel value="${dummyController.duvel}" />
-                </td>
-                <td>
-                    <h:commandButton action="#{dummyController.increaseLeffe}" image="images/leffe.png" style="width: 100px; height: 100px"/>
-                    <h:outputLabel value="${dummyController.leffe}" />
-                </td>
+                <c:forEach items="${beerController.fetchAllBeers()}" var="beer">
+                    <h:commandButton id="be" action="#{beerController.beerButtonPressed(beer.id)}" image="${beer.imageSource}" style="width: 100px; height: 100px"/>
+                    <h:outputLabel value="${beer.count}" />
+                </c:forEach>
             </tr>
         </table>
     </h:form>
