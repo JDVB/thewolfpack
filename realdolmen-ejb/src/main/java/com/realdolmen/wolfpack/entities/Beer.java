@@ -6,9 +6,10 @@ import javax.persistence.*;
  * Created by JDOAX80 on 22/09/2015.
  */
 @Entity
-@NamedQueries({
-        @NamedQuery(name = Beer.FIND_ALL, query = "SELECT b FROM Beer b")
+/*@NamedQueries({
+        //@NamedQuery(name = Beer.FIND_ALL, query = "SELECT b FROM Beer b")
 })
+*/
 public class Beer {
 
     private static final String FIND_ALL = "findAllBeers";
