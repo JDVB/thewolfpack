@@ -1,5 +1,4 @@
-package com.realdolmen.wolfpack.entities;
-
+package com.realdolmen.wolfpack.controllers;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
@@ -29,7 +28,21 @@ public class LoginController implements Serializable {
         this.password = password;
     }
 
-    public void login() {
+    public String login() {
+
+        if (username.equals("test")&& password.equals("password"))
+        {
+            //todo
+            return "beercounter";
+
+        }
+        else
+        {
+            //error
+            return "index";
+
+        }
+
 
     }
 }
