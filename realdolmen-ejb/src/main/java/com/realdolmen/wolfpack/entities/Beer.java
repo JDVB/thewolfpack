@@ -1,19 +1,20 @@
 package com.realdolmen.wolfpack.entities;
 
 import javax.persistence.*;
+import java.util.Map;
 
 /**
  * Created by JDOAX80 on 22/09/2015.
  */
 @Entity
-/*@NamedQueries({
-        //@NamedQuery(name = Beer.FIND_ALL, query = "SELECT b FROM Beer b")
+@NamedQueries({
+        @NamedQuery(name = Beer.FIND_ALL, query = "SELECT b FROM Beer b"),
+        @NamedQuery(name = Beer.FIND_BEER_BY_ID, query = "SELECT b FROM Beer b WHERE id = :id")
 })
-*/
 public class Beer {
 
-    private static final String FIND_ALL = "findAllBeers";
-
+    public static final String FIND_ALL = "findAllBeers";
+    public static final String FIND_BEER_BY_ID = "findBeerById";
     @Id
     @GeneratedValue()
     private Integer id;
@@ -21,7 +22,11 @@ public class Beer {
     private String producer;
     private String brand;
     private double volume;
+    private int unitsSold;
     private double alcoholPercentage;
+    private double totalVolume;
+    private int count;
+    private String imageSource;
 
     public Beer(String type, String producer, String brand, double volume, double alcoholPercentage) {
         this.type = type;
