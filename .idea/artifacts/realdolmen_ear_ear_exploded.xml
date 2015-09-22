@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="realdolmen-ear:ear exploded">
+    <output-path>$PROJECT_DIR$/realdolmen-ear/target/realdolmen-ear</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="realdolmen-ear/javaeeApplication/JavaEE" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/realdolmen-ear/target/realdolmen-ear/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/realdolmen-ear/src/main/application" />
+      <element id="archive" name="realdolmen-web.war">
+        <element id="artifact" artifact-name="realdolmen-web:war exploded" />
+      </element>
+      <element id="archive" name="realdolmen-ejb.jar">
+        <element id="artifact" artifact-name="realdolmen-ejb:ejb exploded" />
+      </element>
+    </root>
+  </artifact>
+</component>
