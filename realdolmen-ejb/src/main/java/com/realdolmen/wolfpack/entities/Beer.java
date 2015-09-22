@@ -28,12 +28,24 @@ public class Beer {
     private int count;
     private String imageSource;
 
-    public Beer(String type, String producer, String brand, double volume, double alcoholPercentage) {
+    public Beer() {
+    }
+
+    public Beer(String type, String producer, String brand, double volume, double alcoholPercentage, String imageSource) {
         this.type = type;
         this.producer = producer;
         this.brand = brand;
         this.volume = volume;
         this.alcoholPercentage = alcoholPercentage;
+        this.imageSource = imageSource;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getType() {
